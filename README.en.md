@@ -1,44 +1,57 @@
 # Chief Pitfall Officer (CPO)
 
-> **"Ensuring the Client is no longer a 'lamb to the slaughter' in the face of professional traps."**
+> **"Risk Avoidance + Execution: Ensuring the Client is no longer a 'lamb to the slaughter' in the face of professional traps."**
 
-`chief-pitfall-officer` is an AI-powered audit and requirement deconstruction skill tailored for **Clients (Demand Side)**. It integrates deep expertise across Legal, Financial, Technical, and Management domains to help decision-makers identify vendor traps, mitigate risks, and bridge knowledge gaps.
+`chief-pitfall-officer` is an AI-powered audit and full-lifecycle implementation skill tailored for **Clients (Demand Side)**. It integrates deep expertise across Legal, Financial, Technical, and Construction Management domains to help decision-makers identify vendor traps, mitigate risks, and provide actionable SOP guides from requirement deconstruction to final execution.
 
 ---
 
-## 🛡️ Core Values
+## 🛡️ Core Values: Dual-Dimension System
 
-Before a project kicks off, CPO acts as your "Shadow Consultant," providing:
+Unlike standard task deconstruction, CPO provides a dual layer of protection: "Risk Avoidance + Execution Blueprint."
+
+### 1. Risk Avoidance
 - **Bridge Knowledge Gaps**: Identify hidden environmental hurdles (Policy, Technical, Supply Chain).
 - **Penetrate Cost Black Boxes**: Provide industry benchmarks to audit labor, materials, and waste reasonableness.
 - **Block Contract Traps**: Deep-audit IP ownership, liability caps, and subcontracting restrictions.
-- **Control Execution Deviations**: Set Key Decision Points (★) to ensure the process stays on track.
+
+### 2. Execution Blueprint
+- **Full-Lifecycle SOP**: Provide end-to-end execution checklists for pre-launch surveys, vendor bidding, compliance filings, and final acceptance.
+- **Key Inspection Plans**: Set critical inspection points (★) during construction/execution to ensure no deviations.
+- **Business Readiness**: Cover the final 100 meters from physical delivery to business go-live (launch/opening).
 
 ---
 
-## 🏗️ 10-Dimension Full-Lifecycle Audit
+## 🏗️ 10-Dimension Audit + 5-Phase Execution Blueprint
 
-Unlike standard deconstruction, CPO enforces a rigorous 10-dimension audit:
+### 10 Audit Dimensions
+1. **WBS & Milestones** | 2. **Material & Labor Audit** | 3. **Participant Risk Map** | 4. **Flow & Env Check** | 5. **Quantifiable Acceptance**
+6. **Pricing & Cost Audit** | 7. **Process Control (★)** | 8. **Delivery Evaluation** | 9. **Legal Compliance** | 10. **Financial Settlement**
 
-1.  **WBS & Milestones**: Eliminates "black box" segments in execution.
-2.  **Material Audit**: Prevents substitution with inferior goods; locks in brands and specs.
-3.  **Labor Audit**: Verifies qualifications and prevents labor inflation.
-4.  **Participant Risks**: Warns of "buck-passing" scenarios and defines responsibility boundaries.
-5.  **Environment Check**: Identifies policy redlines, technical constraints, and market hurdles.
-6.  **Quantifiable Acceptance**: Converts vague adjectives into measurable metrics.
-7.  **Pricing Review**: Uncovers hidden charges and provides Audit Checklists.
-8.  **Process Control**: Sets stage-gate sign-offs and on-site audit points.
-9.  **Legal Compliance**: Audits contract clauses to protect IP and exit rights.
-10. **Financial Settlement**: Optimizes payment rhythm (2-3-3-2) and locks in maintenance costs.
+### 5 Execution Blueprints
+- **Pre-launch Survey**: Client-side self-check and resource gathering before kickoff.
+- **Bidding & Evaluation**: Hard metrics and soft weights for vendor selection.
+- **Milestone Tracking**: Detailed weekly/daily timelines and on-site inspection plans.
+- **Compliance Guide**: Administrative approval flows for Fire Safety, Environmental, Licensing, etc.
+- **Launch Preparation**: Post-delivery business readiness and final acceptance checklists.
 
 ---
 
 ## 👥 Who Needs CPO?
 
-- **SME Owners**: Those lacking professional procurement teams who need an all-in-one guide.
-- **Procurement/Audit Officers**: Those needing professional audit benchmarks for cross-sector projects.
+- **SME Owners**: Those lacking professional procurement teams who need an all-in-one guide for risk and execution.
+- **Procurement/Audit Officers**: Those needing professional audit benchmarks and execution standards for cross-sector projects.
 - **Cross-Sector Project Leads**: Managers suddenly responsible for unfamiliar areas (e.g., HR leading Digital Transformation).
-- **G2B/SOE Coordinators**: Those under high compliance pressure needing to ensure proper fund usage.
+- **G2B/SOE Coordinators**: Those under high compliance pressure needing to ensure projects are delivered on time, on budget, and by the rules.
+
+---
+
+## 📈 Supported Sectors (with Execution SOPs)
+
+- **F&B/Retail Renovation**: Full-cycle plans from site survey to construction inspection and opening prep.
+- **Live Streaming**: GMV "padding" prevention, influencer risk control, and studio readiness checklists.
+- **Urban Renewal**: Compliance redline warnings, unforeseen cost management, and structural inspection.
+- **Digital Transformation**: System migration audit, data compliance filing, and canary release flows.
 
 ---
 
@@ -48,26 +61,22 @@ Unlike standard deconstruction, CPO enforces a rigorous 10-dimension audit:
 You can trigger the skill by typing:
 - `"Help me deconstruct my requirements"`
 - `"How to avoid traps in this project?"`
+- `"How to implement this project?"`
 - `"Is this vendor quote reasonable?"`
-- `"Create a client-side protection plan"`
+- `"Create a full-lifecycle client protection plan"`
 
 ### Example Input
 > "Chain coffee brand Xiaohongshu marketing campaign, budget 100k RMB, how to avoid being scammed by the advertising agency?"
-
-## 加入群聊
-
-<div align="center">
-  <img src="https://qomob.ai/xskill.jpg" width="600" alt="XSkill">
-</div>
+> "I want to open a 200㎡ restaurant with a 500k RMB budget. Please provide a full risk avoidance and execution plan."
 
 ---
 
 ## 📂 Architecture
 
-- **[SKILL.en.md](SKILL.en.md)**: Core logic and 10-dimension workflow.
-- **[references/](references/)**: Knowledge bases for industry adaptation, legal/financial audit, etc.
-- **[assets/](assets/)**: Professional risk-dashboard HTML templates.
+- **[SKILL.en.md](SKILL.en.md)**: Core logic, 10-dimension audit, and execution workflow.
+- **[references/](references/)**: Knowledge bases for industry SOPs, legal/financial audit, etc.
+- **[assets/](assets/)**: Professional risk-dashboard and execution tracker HTML templates.
 
 ---
 
-**Chief Pitfall Officer (CPO)** — Your Professional Shadow Consultant.
+**Chief Pitfall Officer (CPO)** — Your Professional Shadow Consultant & Implementation Mentor.
