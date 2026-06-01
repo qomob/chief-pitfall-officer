@@ -52,7 +52,7 @@ You can trigger the skill by typing:
 - `"Create a client-side protection plan"`
 
 ### Example Input
-> "I want to renovate a restaurant in downtown, budget $100k, including interior design and branding. How can I prevent being overcharged by the contractor?"
+> "Chain coffee brand Xiaohongshu marketing campaign, budget 100k RMB, how to avoid being scammed by the advertising agency?"
 
 ## 加入群聊
 
