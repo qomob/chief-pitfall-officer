@@ -1,68 +1,32 @@
-# Industry Adaptation & Typical Scenarios (EN)
+# Industry Adaptation Guide (Tiered Loading Router)
 
-This document provides sector-specific adaptation guides, including selection logic, environment checks, and audit priorities.
-
----
-
-## Live Streaming & E-commerce
-
-### Typical Scenarios
-- 0 to 1 Brand Livestream Setup
-- 大促 (Promotion) Operation
-- Studio Design & Equipment Config
-
-### Environment Check (EN)
-- **Tech**: Dedicated upstream bandwidth (≥ 20Mbps)?
-- **Policy**: Sensitive categories (Health/Finance) require specific whitelisting?
-
-### Participant Risks
-- **Role**: DP (Service Provider). **Risk**: GMV "padding" (fake data) to earn commission.
-- **Prevention**: Commission linked to "Settled Amount" after returns/refunds.
+This file serves as the entry point for industry adaptation. To optimize context load, specific industry SOPs are split into the `industries/` sub-directory.
 
 ---
 
-## Urban Renewal & Renovation
+## 1. Industry Routing Table
 
-### Typical Scenarios
-- Old Factory to Creative Park
-- Historical District Revitalization
-- Office/Store Renovation
-
-### Environment Check (EN)
-- **Tech**: Foundation load-bearing, power capacity, and legacy pipe status.
-- **Policy**: Historical building redlines and planning bureau approval flows.
-
-### Participant Risks
-- **Role**: Contractor. **Risk**: Hidden structural damage during renovation leading to massive cost overruns.
-- **Prevention**: 3D laser scanning before kickoff; define boundaries for "Unforeseen Costs."
-
-### Execution Blueprint (Store Renovation Edition)
-
-#### 1. Pre-launch Survey Checklist
-- [ ] **Property Documents**: Obtain original structural, plumbing, and electrical drawings.
-- [ ] **Capacity Verification**: Check if the power rating and exhaust pipe diameter meet new equipment needs.
-- [ ] **Operational Environment**: Confirm mall/street rules for material transport and waste removal.
-
-#### 2. Vendor Evaluation Standards
-- **Qualifications (20%)**: Grade II Interior Decoration, Grade II Fire Safety.
-- **Experience (40%)**: At least 3 similar projects in the same district/sector in the last 2 years.
-- **Timeline Commitment (20%)**: Capability for prefabricated construction; meet the 7-15 day deadline.
-- **After-sales (20%)**: Local maintenance team with 2-hour emergency response.
-
-#### 3. Execution Milestones & Inspection
-- **Kickoff**: Site verification; check if plumbing/electrical points conflict with design.
-- **Plumbing/Electrical (★ Core Audit)**: Pressure test at 0.8Mpa for 30min; wire brand/spec audit.
-- **Carpentry**: Ceiling joist density check; edge treatment inspection for panels.
-- **Installation**: Signage stability check; POS terminal power/data interface verification.
-
-#### 4. Compliance & Licensing
-- **Fire Safety**: Mandatory design filing and acceptance for spaces > 300㎡.
-- **Environmental**: Install certified oil smoke purifiers and keep 3rd-party cleaning logs.
-- **Signage**: Submit rendering for approval to City Management before hoarding setup.
-
-#### 5. Acceptance & Launch Checklist
-- **Engineering**: Formaldehyde treatment; 4-hour full-load power test for all equipment.
-- **Operational**: UI/Visual updates on platforms; POS stress test; staff service SOP drill.
-- **Legal**: Business license and Food Service Permit displayed on-site.
+| Industry | Core Sub-module Path | Content Overview |
+| :--- | :--- | :--- |
+| **F&B/Retail** | `references/industries/catering.en.md` | Image upgrade, Opening SOP, F&B redlines |
+| **E-commerce/Digital** | `references/industries/digital.en.md` | Site building, Private traffic, Data tracking, Compliance |
+| **Manufacturing** | `references/industries/manufacturing.en.md` | Line renovation, Quality systems, ERP/MES |
+| **Education** | `references/industries/education.en.md` | Curriculum R&D, Platform setup, Campus compliance |
+| **Events** | `references/industries/events.en.md` | PR events, Product launches, Police approvals |
+| **Real Estate** | `references/industries/real-estate.en.md` | Development, Prefab standards, Permit redlines |
+| **Live Streaming** | `references/industries/livestream.en.md` | Studio setup, GMV padding, Influencer risk |
+| **Urban Renewal** | `references/industries/urban-renewal.en.md` | Structural加固, Heritage redlines, Unforeseen costs |
+| **Exhibition** | `references/industries/exhibition.en.md` | Showroom design, SI standardization, Multimedia integration |
+| **Consulting** | `references/industries/consulting.en.md` | Strategic consulting, Tourism plans, ROI models |
+| **Healthcare** | `references/industries/healthcare.en.md` | Smart health, GSP compliance, Data privacy |
+| **Fintech** | `references/industries/fintech.en.md` | IT innovation, Risk models, Data consistency |
+| **Government** | `references/industries/government.en.md` | G2B services, Data lakes, Prime contractor audit |
 
 ---
+
+## 2. Cross-Industry Rules
+
+1. **Determine Prime Industry**: Use the industry of the core deliverable as the main framework.
+2. **Tiered Loading**: Load the prime industry file first, then the auxiliary industry file if needed.
+3. **Role Merging**: Combine overlapping roles across sectors.
+4. **Conflict Resolution**: If processes conflict, prioritize the prime industry's flow.
