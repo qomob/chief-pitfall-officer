@@ -54,6 +54,12 @@ You can trigger the skill by typing:
 ### Example Input
 > "I want to renovate a restaurant in downtown, budget $100k, including interior design and branding. How can I prevent being overcharged by the contractor?"
 
+## 加入群聊
+
+<div align="center">
+  <img src="https://qomob.ai/xskill.jpg" width="600" alt="XSkill">
+</div>
+
 ---
 
 ## 📂 Architecture
