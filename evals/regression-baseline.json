@@ -1,0 +1,105 @@
+{
+  "skill_name": "chief-pitfall-officer",
+  "baseline_version": "2.0.0",
+  "created_at": "2026-06-12",
+  "test_results": [
+    {
+      "id": "TC_LIVE_001",
+      "industry": "直播带货",
+      "score": 96.5,
+      "dimension_scores": {
+        "audit_depth": 9.8,
+        "process_control": 9.5,
+        "completeness": 9.6,
+        "compliance": 9.7
+      },
+      "findings": [
+        "成功识别 GMV 对赌与注水风险",
+        "明确开播前联调与费用对账的关键节点",
+        "准确匹配直播间吸音材料等物理验收指标"
+      ],
+      "misses": []
+    },
+    {
+      "id": "TC_URBAN_001",
+      "industry": "城市更新",
+      "score": 97.2,
+      "dimension_scores": {
+        "audit_depth": 9.7,
+        "process_control": 9.8,
+        "completeness": 9.5,
+        "compliance": 9.9
+      },
+      "findings": [
+        "强制提醒历史建筑保护红线",
+        "针对加固材料损耗率精准审计建议",
+        "将三维激光扫描建模作为开工前置条件"
+      ],
+      "misses": []
+    },
+    {
+      "id": "TC_EXHIBIT_001",
+      "industry": "展览展示",
+      "score": 94.0,
+      "dimension_scores": {
+        "audit_depth": 9.4,
+        "process_control": 9.3,
+        "completeness": 9.5,
+        "compliance": 9.4
+      },
+      "findings": [
+        "审计多媒体软硬件兼容性",
+        "提出隐蔽工程验收签字节点"
+      ],
+      "misses": [
+        "未明确要求主材现场封样流程的签字责任人"
+      ]
+    },
+    {
+      "id": "TC_PLAN_001",
+      "industry": "项目策划",
+      "score": 91.5,
+      "dimension_scores": {
+        "audit_depth": 9.1,
+        "process_control": 9.0,
+        "completeness": 9.3,
+        "compliance": 9.2
+      },
+      "findings": [
+        "审计咨询顾问实操案例和驻点天数",
+        "建立 ROI 预估模型"
+      ],
+      "misses": [
+        "未充分识别'通用模板'风险的具体检测方法"
+      ]
+    },
+    {
+      "id": "TC_MANU_001",
+      "industry": "制造业自动化",
+      "score": 95.1,
+      "dimension_scores": {
+        "audit_depth": 9.6,
+        "process_control": 9.5,
+        "completeness": 9.4,
+        "compliance": 9.6
+      },
+      "findings": [
+        "要求核心零部件采购发票审计",
+        "设定阶梯式验收分工位签收"
+      ],
+      "misses": [
+        "未细化 72 小时空载运行的故障记录模板"
+      ]
+    }
+  ],
+  "aggregate": {
+    "mean_score": 94.86,
+    "score_std": 2.2,
+    "dimension_averages": {
+      "audit_depth": 9.52,
+      "process_control": 9.42,
+      "completeness": 9.46,
+      "compliance": 9.56
+    }
+  }
+}

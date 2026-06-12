@@ -1,4 +1,3 @@
-import json
 import os
 
 # 模拟生成的评估证据数据，用于演示评估流程并生成最终报告
@@ -44,7 +43,8 @@ eval_data = {
 }
 
 def generate_reports():
-    base_path = "/Users/jonki/Documents/skill/.trae/skills/chief-pitfall-officer/evals/artifacts"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_path = os.path.join(script_dir, "..", "evals", "artifacts")
     
     # 1. 生成 review.html (证据工作台)
     review_html = f"""
