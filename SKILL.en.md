@@ -146,3 +146,102 @@ Append a review log template at the end for the client to record feedback during
 ## VI. Execution Audit Checklist
 ## VII. Project Review & Feedback Log (Execution Feedback)
 ```
+
+## Phase 6: Self-Evolution Loop (Loop 3: L7→L7.5→L6→L6.5)
+
+**Core Philosophy**: Static prompts inevitably degrade after six months. The self-evolution loop ensures every execution generates knowledge沉淀, making the Skill more accurate the more it is used.
+
+```
+[Output Complete] → Step 11: Runtime Log (L7) → Step 12: Knowledge Delta Extraction (L6) → Step 13: Knowledge Base Update (L6.5)
+```
+
+### Step 11: Runtime Recording (L7 Monitor)
+
+After output is complete, **automatically** (no user action needed) append a record to `<skill-base>/learnings/runtime-log.md`:
+
+| Field | Instructions |
+| :--- | :--- |
+| `timestamp` | Current date |
+| `industry` | Identified industry |
+| `scenario` | Scenario summary (≤10 chars) |
+| `modules_used` | List of reference files actually loaded |
+| `risk_hits` | Number of risk warnings in the solution |
+| `risk_misses` | Unknown (leave blank, await user feedback) |
+| `user_feedback` | Unknown (leave blank, await user feedback) |
+| `price_accuracy` | Unknown (leave blank, await user feedback) |
+| `regulation_changes` | Did user mention new regulations? (record if yes) |
+
+### Step 12: Knowledge Delta Extraction (L6 Learning)
+
+Analyze the execution and extract potential Knowledge Deltas, writing to `<skill-base>/learnings/knowledge-delta.md`:
+
+**Trigger conditions** (extract if ANY is met):
+- User proactively reports deficiencies or omissions in the solution
+- User mentions new pricing information not in `pricing-database.md`
+- User mentions new regulations/policies not in `industry-knowledge.md`
+- User describes new vendor tactics not covered in `references/`
+- User's industry is not in the `industry-adaptation.md` routing table
+
+**Format**: Append to the table in `knowledge-delta.md` using its format, with `status` set to `pending`.
+
+### Step 13: Knowledge Base Update (L6.5 Knowledge Update)
+
+When a Knowledge Delta's `status` becomes `verified` (via user confirmation or external search verification), write it to the corresponding references file:
+
+| Delta category | Target File | Update Method |
+| :--- | :--- | :--- |
+| `pricing` | `references/pricing-database.md` | Append or update price ranges for the industry |
+| `regulation` | `references/industry-knowledge.md` | Append new checklist item to the industry section |
+| `tactic` | `references/participant-risk-map.md` or `references/industries/*.md` | Append to "buck-passing" scenarios or industry SOP |
+| `process` | `references/acceptance-standards.md` | Append new acceptance nodes or quantified metrics |
+| `industry` | `references/industries/<new>.md` | Create a new industry sub-module file |
+
+After each update, append a modification record to `<skill-base>/learnings/update-log.md`.
+
+### Step 14: Creator vNext Seed Generation (L6.5 → L2)
+
+After reference files are updated, generate (or update) Creator vNext seeds, writing to `<skill-base>/learnings/creator-vnext.md`:
+
+**Generation Rules**:
+- One seed record per applied Knowledge Delta
+- If an active seed already exists for the same `target_phase`, mark the old one as `superseded` and insert the new one
+- Seed `instruction` must be actionable and executable (not descriptive text)
+
+**Seed Template**:
+
+| Field | Filling Rules |
+| :--- | :--- |
+| `seed_id` | `vNext-{year}-{seq}`, incrementing |
+| `source_delta` | Corresponding KD ID |
+| `target_phase` | Mapped from delta category: pricing→Phase 2, regulation→Phase 1, tactic→Phase 3, process→Phase 4 |
+| `instruction` | Format: "When [trigger condition], [specific action]" |
+| `effective_from` | Current version from `version.json` |
+| `status` | `active` |
+
+**Activation Mechanism**: On next execution, the "Explicit vNext Seed Loading" rule automatically injects active seeds into the execution instructions.
+
+### User Feedback Trigger Keywords
+
+When the user uses the following expressions in subsequent conversations, trigger L7.5 feedback structuring:
+- "The last solution didn't consider XX"
+- "The actual price is XX, different from what you said"
+- "The vendor used a new trick: XX"
+- "A new regulation/policy XX came out"
+- "This solution helped" / "This solution was useless"
+
+# Index
+
+- `<skill-base>/references/industry-knowledge.en.md` — Environment checklist, hidden requirements, industry tags
+- `<skill-base>/references/participant-risk-map.en.md` — Role boundaries, buck-passing scenarios, prevention measures
+- `<skill-base>/references/acceptance-standards.en.md` — Quantified metrics, ambiguity avoidance, acceptance templates
+- `<skill-base>/references/pricing-database.en.md` — Price ranges, fee traps, audit Checklist
+- `<skill-base>/references/legal-financial-audit.en.md` — Legal IP ownership, breach liability, financial settlement timing
+- `<skill-base>/references/output-templates.en.md` — Output templates for each module (client perspective)
+- `<skill-base>/references/industry-adaptation.en.md` — Multi-industry adaptation and typical scenarios
+- `<skill-base>/assets/report-template.html` — Client risk dashboard report template
+- `<skill-base>/learnings/runtime-log.md` — Runtime execution log (self-evolution data source)
+- `<skill-base>/learnings/knowledge-delta.md` — Knowledge delta report (pending/applied)
+- `<skill-base>/learnings/update-log.md` — Knowledge base modification audit log
+- `<skill-base>/learnings/creator-vnext.md` — Creator vNext seed instructions (explicit evolution transfer)
+- `<skill-base>/version.json` — SSOT version (SMM rating, baseline, changelog)
+```

@@ -28,5 +28,6 @@
 
 | timestamp | industry | scenario | modules_used | risk_hits | risk_misses | user_feedback | price_accuracy | regulation_changes |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-06-14 | 餐饮 | 200㎡火锅店装修，预算50万 | pricing-database, catering, acceptance-standards, legal-financial-audit | 7 | 消防通道宽度要求未覆盖 | "实际装修价格 1800 元/㎡，和你说的 1200-1500 不一样"；"乙方用了新套路：先低价中标再通过增项加价" | 偏低（实际偏高20%） | — |
 | 2026-06-12 | 餐饮 | 200㎡火锅店装修，预算50万 | pricing-database, catering | 5 | — | — | — | — |
 | 2026-06-12 | 直播 | 品牌直播间搭建，预算30万 | pricing-database, livestream, participant-risk-map | 4 | — | — | — | — |
